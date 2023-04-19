@@ -56,6 +56,11 @@ class Render extends Base {
         <?php
     }
 }
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (!CSRFToken::validateToken($_POST['csrf_token'])) {
+        header('Location: quicksort_form.php');
+    }
+}
 
 $render = new Render('퀵 정렬 결과', "");
 $render->render();

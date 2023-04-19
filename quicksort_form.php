@@ -5,8 +5,9 @@ class Render extends Base {
 
     protected function content(): void
     {
+    $this->token->setToken(); // Token 재설정
 ?>
-        <form method="POST" action="/quicksort.php">
+        <form method="POST" action="/quicksort.php"><input type="hidden" name="csrf_token" value="<?php echo $this->token->getToken() ?>">
             <div class="mb-3">
             <label for="input" class="form-label">배열 정보 입력: </label>
                 <textarea class="form-control" name="input" id="input" rows="5"

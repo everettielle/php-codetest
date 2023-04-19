@@ -9,6 +9,7 @@ class Render extends Base {
         <h3>이미 로그인되어 있습니다.</h3>
         <?php
     } else {
+        $this->token->setToken(); // Token 재설정
         ?>
 <form method="POST"><input type="hidden" name="csrf_token" value="<?php echo $this->token->getToken() ?>">
     <div class="col-lg-3 col-md-5 col-sm-8">
