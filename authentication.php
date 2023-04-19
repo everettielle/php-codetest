@@ -41,7 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $result = $stmt->execute(); // Query execution
 
         if ($result->fetchArray() !== false) {
-            $_SESSION['username'] = $username;
+            $_SESSION['username'] = $username; // 세션에 유저 정보 추가 (로그인)
             header('Location: index.php');
             exit();
         } else {
