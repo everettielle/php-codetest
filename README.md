@@ -16,4 +16,5 @@
 - `csrf_token.php`: 폼에 CSRF Token 인증과정을 추가하여 CSRF 공격을 방지하기 위한 클래스입니다.
 - `db.sqlite`: 유저의 정보가 저장되어 있는 데이터베이스 파일입니다. DB 서버 구축의 번거로움을 방지하기 위해 SQLite3를 사용하였습니다. 
 
+PHP 버전은 `8.2.5`를 기반으로 제작하였습니다. 
 PHP extension의 경우 `sqlite3`를 사용하였습니다. (`extension=sqlite3`)
